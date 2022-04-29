@@ -15,7 +15,13 @@ export class stringCalculator {
 
                 if (!isNaN(Number(str[i]))) {
 
-                    nums.push(Number(str[i]));
+                    if(str[i-1]=="-"){
+                        throw new Error("Negatives not allowed");
+                    } else {
+                        nums.push(Number(str[i]));
+                    }
+
+                    
 
                 }
 

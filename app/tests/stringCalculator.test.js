@@ -41,4 +41,18 @@ describe('String Calculator', () => {
     
     });
 
+    test('for string //;\n1;2 it returns 3', () => {    
+
+        expect(Calculator.add("//;\n1;2")).toBe(3);
+    
+    });
+
+    test('for string -1 it returns Negatives not allowed', () => {    
+
+        expect(() => {Calculator.add("-1");}).toThrow("Negatives not allowed");
+    
+    });
+
+    
+
 });
