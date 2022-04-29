@@ -3,7 +3,14 @@ import { stringCalculator } from '../js/stringCalculator';
 
 describe('String Calculator', () => {
 
-    let Calculator = new stringCalculator;
+
+    let Calculator
+
+    
+    beforeAll(() => {
+        Calculator = new stringCalculator;
+    })
+    
 
     test('for string empty it returns 0', () => {    
 
@@ -50,6 +57,12 @@ describe('String Calculator', () => {
     test('for string -1 it returns Negatives not allowed', () => {    
 
         expect(() => {Calculator.add("-1");}).toThrow("Negatives not allowed -1");
+    
+    });
+
+    test('for string -1,-2,-3 it returns Negatives not allowed', () => {    
+
+        expect(() => {Calculator.add("-1");}).toThrow("Negatives not allowed -1,-2,-3");
     
     });
 
