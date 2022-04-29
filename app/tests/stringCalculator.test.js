@@ -49,7 +49,7 @@ describe('String Calculator', () => {
 
     test('for string -1 it returns Negatives not allowed', () => {    
 
-        expect(() => {Calculator.add("-1");}).toThrow("Negatives not allowed");
+        expect(() => {Calculator.add("-1");}).toThrow("Negatives not allowed -1");
     
     });
 
